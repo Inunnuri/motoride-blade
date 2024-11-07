@@ -8,6 +8,8 @@
 </head>
 <body>
   <x-navbar></x-navbar>
+  <div id="error-message" style="display:none;"></div>
+
   <div class="w-full p-6 flex justify-center items-center bg-gray-100">
     <div class="container bg-white p-4 rounded-lg shadow-lg">
       <h1 class="font-semibold text-gray-900 text-xl mb-2">Daftar Produk</h1>
@@ -39,7 +41,9 @@
                                 <div class="flex m-4">
                                   <img class="w-40 h-40" src="http://127.0.0.1:8000/storage/${product.product_photo}" alt="${product.title}">
                                     <div class="m-4">
-                                        <h5 class="font-semibold text-primary-600">${product.title}</h5>
+                                        <a href="/product/${product.id}">
+                                           <h5 class="font-semibold text-primary-600">${product.title}</h5>
+                                        </a>
                                         <p class="card-text">Harga: ${product.price}</p>
                                         <p class="card-text">Deskripsi: ${product.description || 'Tidak ada deskripsi'}</p>
                                         <p class="card-text">Lokasi: ${product.location}</p>

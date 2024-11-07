@@ -12,6 +12,12 @@ export default {
     ],
     theme: {
         extend: {
+            // background gambar
+            backgroundImage: (theme) => ({
+                register: "url('/public/img/registrasi.jpg')",
+                login: "url('/public/img/login.jpg')",
+                home: "url('/public/img/home.png')",
+            }),
             colors: {
                 primary: {
                     50: "#eff6ff",
